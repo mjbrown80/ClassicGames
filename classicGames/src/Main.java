@@ -18,6 +18,25 @@ public class Main {
             System.out.println("2) Guess the Number");
 
             int gameSelection = scanner.nextInt();
+            Game selectedGame = null;
+
+            switch(gameSelection){
+                case 1:
+                    selectedGame = new RockPaperScissors();
+                    break;
+                case 2:
+                    selectedGame = new GuessNumber();
+                    break;
+                default:
+                    System.out.println("Invalid selection. Please try again.");
+                    break;
+            }
+
+            if (selectedGame != null){
+                selectedGame.play();
+            }
+
+
 
             System.out.println("Would you like to play again? 1) yes or 2) no");
             int choice = scanner.nextInt();

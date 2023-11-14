@@ -1,2 +1,6 @@
-public class GuessNumber {
+public class GuessNumber implements Game{
+    @Override
+    public void play() {
+
+    }
 }
