@@ -7,7 +7,7 @@ public class GuessNumber implements Game{
     public void play() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Get Ready to play Guess a number");
+        System.out.println("Get Ready to play Guess a number!!");
         System.out.println("Guess a number between 1 and 100");
 
         int userChoice = scanner.nextInt();
