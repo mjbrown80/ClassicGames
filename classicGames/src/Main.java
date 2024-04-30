@@ -1,10 +1,8 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
-        Card card1 = new Card("car", "spades");
-        System.out.println(card1);
 
         Scanner scanner = new Scanner(System.in);
         boolean playAgain = true;
@@ -19,6 +17,7 @@ public class Main {
             System.out.println();
             System.out.println("1) Rock Paper Scissors");
             System.out.println("2) Guess the Number");
+            System.out.println("3) Black Jack 21");
 
             int gameSelection = scanner.nextInt();
             Game selectedGame = null;
@@ -30,6 +29,8 @@ public class Main {
                 case 2:
                     selectedGame = new GuessNumber();
                     break;
+                case 3:
+                    selectedGame = new BlackJack21();
                 default:
                     System.out.println("Invalid selection. Please try again.");
                     break;
