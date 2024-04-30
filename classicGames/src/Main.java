@@ -3,6 +3,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        Card card1 = new Card("car", "spades");
+        System.out.println(card1);
+
         Scanner scanner = new Scanner(System.in);
         boolean playAgain = true;
 
