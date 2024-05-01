@@ -18,6 +18,7 @@ public class Main {
             System.out.println("1) Rock Paper Scissors");
             System.out.println("2) Guess the Number");
             System.out.println("3) Black Jack");
+            System.out.println("4) High card wins");
 
             int gameSelection = scanner.nextInt();
             Game selectedGame = null;
@@ -31,6 +32,9 @@ public class Main {
                     break;
                 case 3:
                     selectedGame = new BlackJack21();
+                    break;
+                case 4:
+                    selectedGame= new HighCardWins();
                     break;
                 default:
                     System.out.println("Invalid selection. Please try again.");
