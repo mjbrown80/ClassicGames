@@ -21,25 +21,36 @@ public class HighCardWins implements Game{
 
         System.out.println("Dealing cards");
 
-        dealerCard.add(deck.dealCard());
-        System.out.println("Dealer Card: " + dealerCard );
+        try {
+            Thread.sleep(2000);
+            dealerCard.add(deck.dealCard());
+            System.out.println("Dealer Card: " + dealerCard );
 
-        userCard.add(deck.dealCard());
-        System.out.println("Your Card: " + userCard);
+            Thread.sleep(2000);
+            userCard.add(deck.dealCard());
+            System.out.println("Your Card: " + userCard);
 
-        int userscore = calculateScore(userCard);
-        int dealerScore = calculateScore(dealerCard);
+            int userscore = calculateScore(userCard);
+            int dealerScore = calculateScore(dealerCard);
 
-        System.out.println("Dealer score is: " + dealerScore);
-        System.out.println("Your score is: " + userscore);
+            Thread.sleep(1500);
+            System.out.println("Dealer score is: " + dealerScore);
+            System.out.println("Your score is: " + userscore);
 
-        if (userscore > dealerScore){
-            System.out.println("Congratulations, you won!!!!!!");
-        } else if (dealerScore >  userscore) {
-            System.out.println("Dealer won!! Better luck next time.");
-        }else{
-            System.out.println("It's a tie!! Try again.");
+            if (userscore > dealerScore){
+                System.out.println("Congratulations, you won!!!!!!");
+            } else if (dealerScore >  userscore) {
+                System.out.println("Dealer won!! Better luck next time.");
+            }else{
+                System.out.println("It's a tie!! Try again.");
+            }
+
+        }catch (InterruptedException e){
+            System.err.println("Dealing was interrupted");
+            Thread.currentThread().interrupt();
         }
+
+
     }
     private int calculateScore(List<String> card){
         int score = 0;
