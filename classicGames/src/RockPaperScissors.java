@@ -61,10 +61,25 @@ public class RockPaperScissors implements Game {
         int computerChoice = random.nextInt(3) + 1;
 
         String result = determineWinner(userChoice, computerChoice);
+    try {
+        System.out.println("Rock");
+        Thread.sleep(800);
+        System.out.println("Paper");
+        Thread.sleep(800);
+        System.out.println("Scissors");
+        Thread.sleep(800);
+        System.out.println("Shoot!!");
+        Thread.sleep(800);
 
         System.out.println("You chose: " + getUserChoiceString(userChoice));
         System.out.println("Computer chose: " + getUserChoiceString(computerChoice));
+       Thread.sleep(800);
         System.out.println("Result: " + result);
+    }catch (InterruptedException e){
+        System.err.println("Dealing was interrupted");
+        Thread.currentThread().interrupt();
+    }
+
 
 
     }
